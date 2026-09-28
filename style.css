@@ -1,1 +1,141 @@
+:root{
+    --color-primary: #46d1e3;
+    --color-primary-dark: #191188;
+    --color-text: #1e1b2e;
+    --color-text-ligth: #626f8a;
+    --color-bg: #fff;
+    --font-main: 'inter', sans serif;
+}
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-main);
+}
+
+.header{
+    width: 100%;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);    
+    position: sticky; /*header gruda no topo da página*/
+    top: 0;
+    z-index: 100;
+}
+
+.header-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo img{
+    width:80px;
+    object-fit: contain;
+}
+
+.logo-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+.logo-subtitle{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap:32px;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-ligth);
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover{
+    color: var(--color-text);
+}
+
+.nav-link.active{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.header-actions{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.search-box input{
+    font-family: var(--font-main);
+    width: 220px;
+    padding: 10px 40px 10px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+.search-box input:focus{
+    border-color: var(--color-primary);
+}
+.search-box input::placeholder{
+    color: var(--color-text-ligth);
+}
+
+.search-icon{
+    position: absolute;
+    right: 14px;
+    fill: var(--color-text-ligth);
+    pointer-events: none;
+    width: 25px;
+}       
+
+.btn-primary {
+    font-family: var(--font-main);
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
